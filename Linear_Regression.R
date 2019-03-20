@@ -9,7 +9,7 @@ head(vdata_exp1)
 
 #Multiple Regression model
 results_exp1 <- lm(V281~ .,  data  =tdata_exp1)
-sm_exp1 <- summary(results_exp1)
+summary(results_exp1)
 results_exp1$coefficients
 options(warn = -1)
 
@@ -27,7 +27,7 @@ head(tdata_exp2)
 head(vdata_exp2)
 #Multiple Regression model
 results_exp2 <- lm(V281~ .,  data  =tdata_exp2)
-sm_exp2 <- summary(results_exp2)
+summary(results_exp2)
 results_exp2$coefficients
 options(warn = -1)
 
