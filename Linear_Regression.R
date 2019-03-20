@@ -10,13 +10,13 @@ head(vdata_exp1)
 #Multiple Regression model
 results_exp1 <- lm(V281~ .,  data  =tdata_exp1)
 sm_exp1 <- summary(results_exp1)
-mse_exp1 <- mean(sm_exp1$residuals^2)
-print(mse_exp1)
 results_exp1$coefficients
 options(warn = -1)
 
 #Prediction
 pred_exp1 <- predict(results_exp1,vdata_exp1)
+mse_exp1 <- mean((vdata_exp1$V281 - predict(results_exp1, vdata_exp1)) ^ 2)
+print(mse_exp1)
 head(pred_exp1)
 head(vdata_exp1)
 
@@ -28,13 +28,13 @@ head(vdata_exp2)
 #Multiple Regression model
 results_exp2 <- lm(V281~ .,  data  =tdata_exp2)
 sm_exp2 <- summary(results_exp2)
-mse_exp2 <- mean(sm_exp2$residuals^2)
-print(mse_exp2)
 results_exp2$coefficients
 options(warn = -1)
 
 #Prediction
 pred_exp2 <- predict(results_exp2,vdata_exp2)
+mse_exp2 <- mean((vdata_exp2$V281 - predict(results_exp2, vdata_exp2)) ^ 2)
+print(mse_exp2)
 head(pred_exp2)
 head(vdata_exp2)
 
